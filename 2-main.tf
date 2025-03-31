@@ -6,6 +6,6 @@ resource "aws_instance" "instance-1" {
     instance_type = var.instance_type
     tags = {
        # "Name" = "Web-Instance"
-       "Name" = "webserver-${count.index}"
+       "Name" = "${var.env}-webserver-${count.index}"
     }
 }
