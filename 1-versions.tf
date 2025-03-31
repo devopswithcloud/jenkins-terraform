@@ -1,7 +1,7 @@
 # terraform settings block 
 terraform {
   # Terraform Version
-  required_version = "~> 1.9.4" #constraints
+  required_version = "~> 1.9" #constraints
   
   
   # Required terraform providers
