@@ -71,7 +71,7 @@ pipeline {
         stage ('destroy') {
             when {
                 expression {
-                    params.ACTION == 'destroy' --auto-approve
+                    params.ACTION == 'destroy' 
                 }
             }
             steps {
@@ -79,7 +79,7 @@ pipeline {
                     input message: 'Are you sure to destroy Infra?', ok: 'yes', submitter: 'i27academy,siva'
                 }
                 sh """
-                terraform destroy -var-file=${TFVARS_FILE}
+                terraform destroy -var-file=${TFVARS_FILE} --auto-approve
                 """
             }
         }
